@@ -6,7 +6,7 @@ class DbConnection
 {
 	public static function getConnection()
 	{
-		$con = new mysqli("localhost","root","iti","cafeteria");   
+		$con = new mysqli("localhost","root","iti","industry");   
 		// $con = new mysqli("127.0.0.1:3306","adminfeFv4jE","Urh58Uq4ebkA","cafteria");   
 		// $con = new mysqli("localhost","root","iti","cafteria");   
 		
