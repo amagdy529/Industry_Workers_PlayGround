@@ -77,7 +77,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'root','root@mail.com','202cb962ac59075b964b07152d234b70',1,'321','../assets/img/1.jpg'),(3,'Hazem','hazem@mail.com','202cb962ac59075b964b07152d234b70',1,'123','../assets/img/2.jpg'),(4,'Ahmed','dasdasd','123123',1,'1234','dasdasdasd'),(5,'Mohamed','mmmmmmm','123',2,'123','asdasd'),(6,'Hussien','mmmmm','123',2,'342','123123'),(7,'Mahmoud','dsdwqewq','123',1,'245','dasqwe');
+INSERT INTO `users` VALUES (1,'root','root@mail.com','202cb962ac59075b964b07152d234b70',1,'321','../assets/img/1.jpg'),(3,'Hazem','hazem@mail.com','202cb962ac59075b964b07152d234b70',1,'123','../assets/img/2.jpg'),(4,'Magdy','dasdasd','123',1,'1234','dasdasdasd');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -59,9 +59,13 @@ class user
 
 	//============================Login===============================
 	     public function Login($value1,$value2){
-
+				print_r($value1);
+				print_r("<br><br>");
+				print_r($value2);
+				print_r("<br><br>");
                 $sql = "SELECT * FROM users WHERE u_email= '".$value1."' AND u_password = '".$value2."'";  
-				$res = $this->dbConnection->query($sql);	
+				$res = $this->dbConnection->query($sql);
+				// print_r($res);die;	
 				return $res;
 				
 
