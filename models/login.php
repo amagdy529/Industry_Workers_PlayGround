@@ -15,7 +15,8 @@ $result = $pro->Login($_POST["email"],md5($_POST["password"]));
 			{
 				$_SESSION['u_id']=$row['u_id'];
 				setcookie("login",$_SESSION['u_id'],time()+(86400*30),"/");
-				header("location: ../views/orders.html");
+				header("location: ../views/all-users.php");
+				// header("location: ../views/orders.html");
 			}
 		else if ($row['u_id'] != "1")
 			{	
