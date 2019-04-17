@@ -12,7 +12,7 @@ print_r($result);
 <br> <br> <br> <br>
 
 <div class="container">
-
+    <a href="add-industry.php" class="btn btn-success">Add New Industry +</a>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -32,8 +32,9 @@ print_r($result);
             echo "<td>".$res['industry_name']."</td>";
             // echo "<td>".$res['age']."</td>";
             // echo "<td>".$res['email']."</td>";    
-            echo "<td><a href=\"edit.php?id=$res[industry_no]\">Edit</a> </td>";        
+            echo "<td><a href=\"edit-industry.php?id=$res[industry_no]\">Edit</a> </td>";        
             echo "<td> <a href=\"delete.php?id=$res[industry_no]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+            echo "</tr>";
         }
         ?>
 
