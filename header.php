@@ -3,6 +3,7 @@
     include_once("config.php");
     echo "inside header";
     $users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/views/all-users.php";
+    $industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/industries/list-industry.php";
     //including the database connection file
     $path = $_SERVER['REQUEST_URI'];
     $file = basename($path);         // $file is set to "index.php"
@@ -36,6 +37,7 @@
             <!-- <li class="active"><a href="orders.html">Home</a></li> -->
             <li class="active"><a href="#">Home</a></li>
             <li class="active"><a href="<?=$users_url?>">Users</a></li>
+            <li class="active"><a href="<?=$industry_url?>">Industries</a></li>
             
 
 
