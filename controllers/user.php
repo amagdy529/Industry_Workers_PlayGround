@@ -12,8 +12,8 @@ class user
        //===========================Add user==============================
 
     function Add_user(){
-    $roomQuery = "Insert into rooms values(".$_POST['u_room'].")";	
-	$this->dbConnection->query($roomQuery);
+    // $roomQuery = "Insert into rooms values(".$_POST['u_room'].")";	
+	// $this->dbConnection->query($roomQuery);
 	$sql = "INSERT INTO users (u_name,u_email,u_password,room_no,ext,u_img) VALUES ( '".$_POST["u_name"]."', '".$_POST["u_email"]."', md5('".$_POST["u_pass"]."'),
 	".$_POST["u_room"].", '".$_POST ["ext"]."', '".$_FILES['pic']['name']."')";
 

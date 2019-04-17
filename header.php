@@ -1,5 +1,7 @@
 <?php 
     echo "inside header";
+    $users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/views/all-users.php";
+     
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +29,7 @@
       <ul class="nav navbar-nav">
             <!-- <li class="active"><a href="orders.html">Home</a></li> -->
             <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="<?=$users_url?>">Users</a></li>
             
 
 
@@ -41,4 +44,41 @@
 </div>
 
 
+<style>
+    .well {
+        background-color: black;
+    }
 
+    .col-sm-2 {
+
+        padding: 10px;
+    }
+
+    .shape {
+        border: 1px solid Gainsboro;
+    }
+
+    table {}
+
+
+    .col-sm-4 {
+
+
+        border: 1px solid Gainsboro;
+
+    }
+
+    tr,
+    td {
+
+        padding: 7px;
+
+
+    }
+
+    #size {
+
+
+        border: 1px;
+    }
+    </style>

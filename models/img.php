@@ -3,6 +3,7 @@ require_once "../controllers/DbConnection.php";
 require_once "../controllers/user.php";
 
 
+
 $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 $upfile = "../assets/img/".$_FILES['pic']['name'] ;
 // Does the file have the right MIME type?
@@ -31,6 +32,7 @@ if (is_uploaded_file($_FILES['pic']['tmp_name']))
 
 $pro = new user(DbConnection::getConnection());
 $result = $pro->Add_user();
+print_r($result);die;
 header("location: ../views/AddUser.html");
 
 
