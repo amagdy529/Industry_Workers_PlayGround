@@ -12,7 +12,12 @@ $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY indust
 <br> <br> <br> <br>
 
 <div class="container">
-    <a href="add-industry.php" class="btn btn-success">Add New Industry +</a>
+    <div class="text-left">
+        <a href="add-industry.php" class="btn btn-success">
+            Add New Industry
+            <span class="glyphicon glyphicon-plus"></span>
+        </a>
+    </div>
     <table class="table table-hover">
         <thead>
             <tr>
