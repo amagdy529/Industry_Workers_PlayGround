@@ -1,11 +1,13 @@
 <?php 
 
+    include_once("config.php");
     echo "inside header";
     $users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/views/all-users.php";
-
+    //including the database connection file
     $path = $_SERVER['REQUEST_URI'];
     $file = basename($path);         // $file is set to "index.php"
-    $file = basename($path, ".php");     
+    $file = basename($path, ".php"); 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

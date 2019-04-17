@@ -5,13 +5,9 @@ require_once "../header.php";
 <br> <br> <br> <br>
 
 
-
-
 <div class="container">
-
     <div class="row" class="table-responsive">
-
-        <form role="form" action="addIndustryFunc.php" method="Post" enctype="multipart/form-data">
+        <form role="form" action="add-Industry-sql.php" method="Post" enctype="multipart/form-data">
             <div class="form-group">
                 <label id="industry_name" for="exampleInputEmail1">Industry Name</label>
                 <input class="form-control" type="text" name="industry_name" placeholder="Industry name" required>
