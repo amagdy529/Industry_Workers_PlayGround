@@ -1,12 +1,16 @@
 <?php 
+
     echo "inside header";
     $users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/views/all-users.php";
-     
+
+    $path = $_SERVER['REQUEST_URI'];
+    $file = basename($path);         // $file is set to "index.php"
+    $file = basename($path, ".php");     
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>All Users</title>
+    <title><?=$file?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
