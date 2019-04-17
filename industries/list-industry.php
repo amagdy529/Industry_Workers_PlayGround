@@ -5,7 +5,7 @@ require_once "../header.php";
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
 $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY industry_no DESC"); // using mysqli_query instead
 
-print_r($result);
+// print_r($result);
 
 ?>
 
@@ -17,9 +17,9 @@ print_r($result);
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Industry Name</th>
+                <!-- <th scope="col">Last</th>
+                <th scope="col">Handle</th> -->
             </tr>
         </thead>
         <tbody>
@@ -29,12 +29,14 @@ print_r($result);
             
             echo "<tr>";
             echo "<th scope='row'>".$res['industry_no']."</th>";
-            echo "<td>".$res['industry_name']."</td>";
-            // echo "<td>".$res['age']."</td>";
-            // echo "<td>".$res['email']."</td>";    
-            echo "<td><a href=\"edit-industry.php?id=$res[industry_no]\">Edit</a> </td>";        
-            echo "<td> <a href=\"delete.php?id=$res[industry_no]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+            echo "<th>".$res['industry_name']."</th>";
+            // echo "<th>".$res['age']."</th>";
+            // echo "<th>".$res['email']."</th>";    
+            echo "<th><a class='btn btn-primary' href=\"edit-industry.php?id=$res[industry_no]\">Edit</a> </th>";        
+            echo "<th><a class='btn btn-danger' href=\"delete-industry-sql.php?id=$res[industry_no]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></th>";
             echo "</tr>";
+            
+
         }
         ?>
 
