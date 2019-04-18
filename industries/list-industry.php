@@ -13,6 +13,9 @@ $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY indust
 
 <div class="container">
     <div class="text-left">
+        <h1> All Industries </h1>
+    </div>
+    <div class="text-left">
         <a href="add-industry.php" class="btn btn-success">
             Add New Industry
             <span class="glyphicon glyphicon-plus"></span>
@@ -23,8 +26,8 @@ $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY indust
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Industry Name</th>
-                <!-- <th scope="col">Last</th>
-                <th scope="col">Handle</th> -->
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody>

@@ -2,10 +2,6 @@
 require_once "../header.php";
 ?>
 
-<br> <br> <br> <br>
-
-
-
 <div class="container">
     <div class="row" class="table-responsive">
         <form role="form" action="add-Industry-sql.php" method="Post" enctype="multipart/form-data">

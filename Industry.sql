@@ -62,7 +62,7 @@ CREATE TABLE `users` (
   `u_email` varchar(128) NOT NULL,
   `u_password` char(32) NOT NULL,
   `industry_no` int(11) unsigned NOT NULL,
-  `ext` char(8) NOT NULL,
+  `user_type` int(11) unsigned NOT NULL,
   `u_img` varchar(255) NOT NULL,
   PRIMARY KEY (`u_id`),
   UNIQUE KEY `u_email` (`u_email`),
@@ -77,7 +77,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'root','root@mail.com','202cb962ac59075b964b07152d234b70',1,'321','../assets/img/1.jpg'),(3,'Hazem','hazem@mail.com','202cb962ac59075b964b07152d234b70',1,'123','../assets/img/2.jpg'),(4,'Magdy','dasdasd','123',1,'1234','dasdasdasd');
+INSERT INTO `users` VALUES (1,'root','root@mail.com','202cb962ac59075b964b07152d234b70',1,1,'../assets/img/1.jpg'),(3,'Hazem','hazem@mail.com','202cb962ac59075b964b07152d234b70',1,2,'../assets/img/2.jpg'),(4,'Magdy','dasdasd','123',1,3,'dasdasdasd');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
