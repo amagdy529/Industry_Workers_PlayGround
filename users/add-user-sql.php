@@ -1,6 +1,6 @@
 <?php
 
-// require_once "../controllers/DbConnection.php";
+include_once("../config.php");
 
 print_r('inside');
 print_r($_POST);
@@ -37,16 +37,9 @@ if (is_uploaded_file($_FILES['pic']['tmp_name']))
 
 // [username] => test [email] => a@a.com [password] => 123 [industry] => volvo [user_type] => 1
 if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $industry = $_POST['industry'];
-    $user_type = $_POST['user_type'];
-    
     $result = mysqli_query($global_mysqli, "INSERT INTO users (u_name,u_email,u_password,industry_no,user_type,u_img) VALUES ( '".$_POST["username"]."', '".$_POST["email"]."', md5('".$_POST["password"]."'),
 	".$_POST["industry"].", '".$_POST ["user_type"]."', '".$_FILES['pic']['name']."')") ;
 
-    print_r($result);
     /* This will give an error. Note the output
     * above, which is before the header() call */
     header('Location:list-users.php');
