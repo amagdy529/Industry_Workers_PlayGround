@@ -49,8 +49,8 @@ print_r($result);
             }
             
             // echo "<th>".$res['email']."</th>";    
-            echo "<th><a class='btn btn-primary' href=\"edit-industry.php?id=$res[industry_no]\">Edit</a> </th>";        
-            echo "<th><a class='btn btn-danger' href=\"delete-industry-sql.php?id=$res[industry_no]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></th>";
+            echo "<th><a class='btn btn-primary' href=\"edit-user.php?id=$res[u_id]\">Edit</a> </th>";        
+            echo "<th><a class='btn btn-danger' href=\"delete-user-sql.php?id=$res[u_id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></th>";
             echo "</tr>";
             
 
