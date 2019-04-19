@@ -15,9 +15,6 @@ while($res = mysqli_fetch_array($result))
 
 ?>
 
-<br> <br> <br> <br>
-
-
 <div class="container">
     <div class="row" class="table-responsive">
         <form role="form" action="edit-Industry-sql.php" method="post" enctype="multipart/form-data">

@@ -14,7 +14,7 @@ print_r($result);
         <h1> All Users </h1>
     </div>
     <div class="text-left">
-        <a href="add-industry.php" class="btn btn-success">
+        <a href="add-user.php" class="btn btn-success">
             Add New User
             <span class="glyphicon glyphicon-plus"></span>
         </a>
