@@ -1,16 +1,20 @@
 <?php
 // require_once "../header.php";
-include "../admin-sidebar.html";
-
+include "../admin-sidebar.php";
+include_once("../config.php");
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
 $result = mysqli_query($global_mysqli, "SELECT * FROM users ORDER BY u_id DESC"); // using mysqli_query instead
 
-print_r($result);
+// print_r($result);
 
 ?>
 
-<div class="container">
+<!-- page-content  -->
+<main class="page-content ">
+            
+    
+    <div class="container">
     <div class="text-left">
         <h1> All Users </h1>
     </div>
@@ -20,6 +24,7 @@ print_r($result);
             <span class="glyphicon glyphicon-plus"></span>
         </a>
     </div>
+    <br>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -63,5 +68,8 @@ print_r($result);
 
 </div>
 
+</main>
+<!-- page-content" -->
 <?php
-include "../admin-sidebar.html";
+
+include "../admin-footer.php";
