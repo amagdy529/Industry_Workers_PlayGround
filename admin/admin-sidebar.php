@@ -1,11 +1,11 @@
 <?php
 include_once("config.php");
 
-$list_users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/list-users.php";
-$add_user_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/add-user.php";
-$settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/admin-settings.php";
-$list_industries_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/industries/list-industry.php";
-$add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/industries/add-industry.php";
+$list_users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/users/list-users.php";
+$add_user_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/users/add-user.php";
+$settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/users/admin-settings.php";
+$list_industries_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/industries/list-industry.php";
+$add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/industries/add-industry.php";
                               
 ?>
 <!DOCTYPE html>

@@ -33,7 +33,7 @@ DROP TABLE IF EXISTS `industries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `industries` (
-  `industry_no` int(11) unsigned NOT NULL,
+  `industry_no` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `industry_name` varchar(50)  NOT NULL,
   PRIMARY KEY (`industry_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
