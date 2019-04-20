@@ -1,7 +1,7 @@
 <?php
 // require_once "../header.php";
 include "../admin-sidebar.php";
-include_once("../config.php");
+// include_once("../config.php");
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
 $result = mysqli_query($global_mysqli, "SELECT * FROM users ORDER BY u_id DESC"); // using mysqli_query instead

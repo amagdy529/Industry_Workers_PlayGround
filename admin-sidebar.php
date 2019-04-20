@@ -1,3 +1,11 @@
+<?php
+include_once("config.php");
+
+$list_users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/list-users.php";
+$add_user_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/add-user.php";
+$settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/admin-settings.php";
+                              
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +40,7 @@
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand">
-                    <a href="#">pro sidebar</a>
+                    <a href="#">Industry Admin Panel</a>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
@@ -51,7 +59,7 @@
                     </div>
                 </div>
                 <!-- sidebar-search  -->
-                <div class="sidebar-item sidebar-search">
+                <!-- <div class="sidebar-item sidebar-search">
                     <div>
                         <div class="input-group">
                             <input type="text" class="form-control search-menu" placeholder="Search...">
@@ -62,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- sidebar-menu  -->
                 <div class=" sidebar-item sidebar-menu">
                     <ul>
@@ -93,23 +101,22 @@
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span class="menu-text">E-commerce</span>
+                                <i class="fa fa-address-book"></i>
+                                <span class="menu-text">Users</span>
                                 <span class="badge badge-pill badge-danger">3</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
+
                                     <li>
-                                        <a href="#">Products
+                                        <a href="<?=$list_users_url?>">List Users
 
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">Orders</a>
+                                        <a href="<?=$add_user_url?>">Add User</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Credit cart</a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </li>
@@ -138,36 +145,12 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-chart-line"></i>
-                                <span class="menu-text">Charts</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Pie chart</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Line chart</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bar chart</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Histogram</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        
+
+
                         <li class="header-menu">
                             <span>Settings</span>
                         </li>
                         <li>
-                            <?php
-                                $settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/admin-settings.php";
-                            ?>
                             <a href="<?=$settings_url?>">
                                 <i class="fa fa-cog"></i>
                                 <span class="menu-text">Settings</span>
