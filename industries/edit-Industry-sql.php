@@ -1,5 +1,7 @@
 <?php
 require_once "../header.php";
+// include "../admin-sidebar.php";
+
 if(isset($_POST['update']))
 {    
     $id = $_POST['id'];

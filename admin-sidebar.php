@@ -4,6 +4,8 @@ include_once("config.php");
 $list_users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/list-users.php";
 $add_user_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/add-user.php";
 $settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/users/admin-settings.php";
+$list_industries_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/industries/list-industry.php";
+$add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/industries/add-industry.php";
                               
 ?>
 <!DOCTYPE html>
@@ -123,25 +125,17 @@ $settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_Pl
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="far fa-gem"></i>
-                                <span class="menu-text">Components</span>
+                                <span class="menu-text">Industries</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">General</a>
+                                        <a href="<?=$list_industries_url?>">List Industries</a>
                                     </li>
                                     <li>
-                                        <a href="#">Panels</a>
+                                        <a href="<?=$add_industry_url?>">Add Industry</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Forms</a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -157,7 +151,7 @@ $settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_Pl
                                 <span class="badge badge-pill badge-primary">Beta</span>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fa fa-calendar"></i>
                                 <span class="menu-text">Calendar</span>
@@ -168,7 +162,7 @@ $settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_Pl
                                 <i class="fa fa-folder"></i>
                                 <span class="menu-text">Examples</span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- sidebar-menu  -->

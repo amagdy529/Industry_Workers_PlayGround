@@ -24,7 +24,7 @@ $industries_array_fetched = mysqli_fetch_array($industries_array);
 <!-- page-content  -->
 <main class="page-content ">
     <div class="text-left">
-        <h1> Add User </h1>
+        <h1> Add New User </h1>
     </div>
     <div class="container">
         <div class="row" class="table-responsive">

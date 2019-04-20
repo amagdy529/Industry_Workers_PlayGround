@@ -1,6 +1,7 @@
 <?php
-require_once "../header.php";
- 
+// require_once "../header.php";
+include "../admin-sidebar.php";
+
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
 $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY industry_no DESC"); // using mysqli_query instead
@@ -9,8 +10,9 @@ $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY indust
 
 ?>
 
-<br> <br> <br> <br>
-
+<!-- page-content  -->
+<main class="page-content ">
+      
 <div class="container">
     <div class="text-left">
         <h1> All Industries </h1>
@@ -18,9 +20,10 @@ $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY indust
     <div class="text-left">
         <a href="add-industry.php" class="btn btn-success">
             Add New Industry
-            <span class="glyphicon glyphicon-plus"></span>
+            <span class="fa fa-plus"></span>
         </a>
     </div>
+    <br>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -52,3 +55,9 @@ $result = mysqli_query($global_mysqli, "SELECT * FROM industries ORDER BY indust
     </table>
 
 </div>
+
+</main>
+<!-- page-content" -->
+<?php
+
+include "../admin-footer.php";

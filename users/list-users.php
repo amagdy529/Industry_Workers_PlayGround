@@ -21,7 +21,7 @@ $result = mysqli_query($global_mysqli, "SELECT * FROM users ORDER BY u_id DESC")
     <div class="text-left">
         <a href="add-user.php" class="btn btn-success">
             Add New User
-            <span class="glyphicon glyphicon-plus"></span>
+            <span class="fa fa-plus"></span>
         </a>
     </div>
     <br>
