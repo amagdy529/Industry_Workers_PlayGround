@@ -54,7 +54,7 @@ while($res = mysqli_fetch_array($result))
                 <input type="hidden" name="id" value=<?=$_COOKIE['logged_user_id']?>>
                 <input type="hidden" name="wh_id" value=<?=$wh_id?>>
 
-                <button type="submit" name="update" class="active btn btn-primary">Submit</button>
+                <button type="submit" name="update" class="active btn btn-primary">Update</button>
             </form>
         </div>
     </div>
