@@ -10,27 +10,40 @@ $result = $pro->Login($_POST["email"],md5($_POST["password"]));
  if ($result->num_rows == 1) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-    	var_dump($row);
-        if($row['u_id'] == "1")
+    		// var_dump($row);die('test');
+        	if($row['u_id'] == "1")
 			{
 				$_SESSION['u_id']=$row['u_id'];
-				setcookie("login",$_SESSION['u_id'],time()+(86400*30),"/");
-				header("location: ../views/all-users.php");
+				$_SESSION['user_type']=$row['user_type'];
+				setcookie("logged_user_id",$_SESSION['u_id'],time()+(86400*30),"/");
+				setcookie("logged_user_type",$_SESSION['user_type'],time()+(86400*30),"/");
+				header("location: ../users/list-users.php");
 				// header("location: ../views/orders.html");
 			}
-		else if ($row['u_id'] != "1")
+			else if ($row['u_id'] != "2")
 			{	
+				$_SESSION['user_type']=$row['user_type'];
 				$_SESSION['u_id']=$row['u_id'];
-				setcookie("login",$_SESSION['u_id'],time()+(86400*30),"/");		
-				header("location: ../views/UserMainPage.html");	
+				setcookie("logged_user_id",$_SESSION['u_id'],time()+(86400*30),"/");		
+				setcookie("logged_user_type",$_SESSION['user_type'],time()+(86400*30),"/");
+				header("location: ../requests/list-requests.php");
+			}
+			else if ($row['u_id'] == "3")
+			{	
+				// die('here user');
+				$_SESSION['user_type']=$row['user_type'];
+				$_SESSION['u_id']=$row['u_id'];
+				setcookie("logged_user_id",$_SESSION['u_id'],time()+(86400*30),"/");		
+				setcookie("logged_user_type",$_SESSION['user_type'],time()+(86400*30),"/");
+				header("location: ../../craftsmen/index.html");	
 			}
 	
-    	}
+    }
 
 }
 else{
 
-   header("location: ../views/Login1.html"); 
+   header("location: ../Login-form.html"); 
 
 }
 

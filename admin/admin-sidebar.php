@@ -1,11 +1,20 @@
 <?php
 include_once("config.php");
 
+// print_r($_COOKIE);
+
+$logged_in_user_array = mysqli_query($global_mysqli, "SELECT * FROM users where u_id =". $_COOKIE['logged_user_id'] ); // using mysqli_query  
+$global_logged_in_user = mysqli_fetch_array($logged_in_user_array);
+// print_r($global_logged_in_user);die('here admin side');
+
+
 $list_users_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/users/list-users.php";
 $add_user_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/users/add-user.php";
 $settings_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/users/admin-settings.php";
 $list_industries_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/industries/list-industry.php";
 $add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/industries/add-industry.php";
+$list_requests_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/requests/list-requests.php";
+$logout_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/controllers/logout.php";
                               
 ?>
 <!DOCTYPE html>
@@ -47,13 +56,23 @@ $add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Worker
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
                     <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
+                        <img class="img-responsive img-rounded" src="../img/user.jpg" alt="User picture">
                     </div>
                     <div class="user-info">
-                        <span class="user-name">Jhon
-                            <strong>Smith</strong>
+                        <span class="user-name">
+                            <strong><?=$global_logged_in_user['u_name']?></strong>
                         </span>
-                        <span class="user-role">Administrator</span>
+                        <?php
+                        
+                            if ($global_logged_in_user['user_type'] == 1) {
+                                echo "<span class='user-role'>Administrator</span>";
+                            } elseif ($global_logged_in_user['user_type'] == 2) {
+                                echo "<span class='user-role'>Worker</span>";
+                            } elseif($global_logged_in_user['user_type'] == 3){
+                                echo "<th>".'User'."</th>";
+                            }
+                        
+                        ?>
                         <span class="user-status">
                             <i class="fa fa-circle"></i>
                             <span>Online</span>
@@ -134,6 +153,23 @@ $add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Worker
                                     </li>
                                     <li>
                                         <a href="<?=$add_industry_url?>">Add Industry</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="far fa-gem"></i>
+                                <span class="menu-text">Requests</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="<?=$list_requests_url?>">List Requests</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Add Request</a>
                                     </li>
                                     
                                 </ul>
@@ -299,7 +335,7 @@ $add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Worker
                     </div>
                 </div>
                 <div>
-                    <a href="#">
+                    <a href="<?=$logout_url?>">
                         <i class="fa fa-power-off"></i>
                     </a>
                 </div>
