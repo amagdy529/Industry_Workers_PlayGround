@@ -82,6 +82,104 @@ INSERT INTO `users` VALUES (1,'root','root@mail.com','202cb962ac59075b964b07152d
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
+
+--
+-- Table structure for table `work_history`
+--
+
+DROP TABLE IF EXISTS `work_history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `work_history`
+(
+  `wh_id` int (11) unsigned NOT NULL AUTO_INCREMENT,
+  `worker_id` int (11)  NOT NULL ,
+  `desc` varchar (1000)  NOT NULL,
+  `experience` varchar (1000)  NOT NULL,
+  PRIMARY KEY (`wh_id`),
+  UNIQUE KEY `worker_id` (`worker_id`),
+  CONSTRAINT `worker_history_ibfk_12` FOREIGN KEY (`worker_id`) REFERENCES `users`(`u_id`) ON DELETE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `work_history`
+--
+
+LOCK TABLES `work_history` WRITE;
+/*!40000 ALTER TABLE `work_history` DISABLE KEYS */;
+INSERT INTO `work_history` VALUES (1,1, 'descrptions text bla bla','experience text bla bla'),(2,3,'desc test','exp test');
+/*!40000 ALTER TABLE `work_history` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+--
+-- Table structure for table `images`
+--
+
+DROP TABLE IF EXISTS `images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `images`
+(
+  `img_id` int (11) unsigned NOT NULL AUTO_INCREMENT,
+  `work_history_id` int (11) unsigned NOT NULL ,
+  `image` varchar (1000)  NOT NULL,
+  PRIMARY KEY (`img_id`),
+  CONSTRAINT `img_constraint_ibfk_13` FOREIGN KEY (`work_history_id`) REFERENCES `work_history`(`wh_id`) ON DELETE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `images`
+--
+
+LOCK TABLES `images` WRITE;
+/*!40000 ALTER TABLE `images` DISABLE KEYS */;
+INSERT INTO `images` VALUES (1,1, 'test.png'),(2,1,'test.jpg');
+/*!40000 ALTER TABLE `images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+
+--
+-- Table structure for table `requests`
+--
+
+DROP TABLE IF EXISTS `requests`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `requests` (
+  `request_id` int(11) NOT NULL AUTO_INCREMENT,
+  `requester_id` int(11) NOT NULL ,
+  `worker_id` int(11) NOT NULL ,
+  `date` date NOT NULL,
+  `desc` varchar(500) NOT NULL,
+  PRIMARY KEY (`request_id`),
+  CONSTRAINT `requests_ibfk_10` FOREIGN KEY (`requester_id`) REFERENCES `users` (`u_id`) ON DELETE CASCADE,
+  CONSTRAINT `requests_ibfk_11` FOREIGN KEY (`worker_id`) REFERENCES `users` (`u_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `requests`
+--
+
+LOCK TABLES `requests` WRITE;
+/*!40000 ALTER TABLE `requests` DISABLE KEYS */;
+INSERT INTO `requests` VALUES (1,1,3,'2019-04-21','request description'),(2,1,3,'2019-04-20','request description');
+/*!40000 ALTER TABLE `requests` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+
+
+
+
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
