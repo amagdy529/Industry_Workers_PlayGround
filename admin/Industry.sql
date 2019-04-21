@@ -94,7 +94,7 @@ CREATE TABLE `work_history`
 (
   `wh_id` int (11) unsigned NOT NULL AUTO_INCREMENT,
   `worker_id` int (11)  NOT NULL ,
-  `desc` varchar (1000)  NOT NULL,
+  `wh_desc` varchar (1000)  NOT NULL,
   `experience` varchar (1000)  NOT NULL,
   PRIMARY KEY (`wh_id`),
   UNIQUE KEY `worker_id` (`worker_id`),

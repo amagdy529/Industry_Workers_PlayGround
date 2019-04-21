@@ -15,6 +15,7 @@ $list_industries_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Wor
 $add_industry_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/industries/add-industry.php";
 $list_requests_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/requests/list-requests.php";
 $logout_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/controllers/logout.php";
+$work_history_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_PlayGround/admin/work-history/edit-work-history.php";
                               
 ?>
 <!DOCTYPE html>
@@ -170,6 +171,24 @@ $logout_url = "http://" . $_SERVER['SERVER_NAME'] . "//" ."Industry_Workers_Play
                                     </li>
                                     <li>
                                         <a href="#">Add Request</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="far fa-gem"></i>
+                                <span class="menu-text">Work History</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="<?=$work_history_url?>">Edit Work History</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Add Images</a>
                                     </li>
                                     
                                 </ul>
