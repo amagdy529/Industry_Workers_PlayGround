@@ -12,7 +12,7 @@ require_once "../header.php";
 
 
 $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-$upfile = "../assets/img/".$_FILES['pic']['name'] ;
+$upfile = "../../uploads/".$_FILES['pic']['name'] ;
 // Does the file have the right MIME type?
 if (!($_FILES['pic']['type'] =="image/jpg" OR $_FILES['pic']['type'] =="image/gif" OR $_FILES['pic']['type'] =="image/jpeg" OR $_FILES['pic']['type'] =="image/png"  ) )
 {
