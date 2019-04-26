@@ -1958,6 +1958,9 @@ legend {
 .portfolio-details .item .image {
 	position: relative;
 }
+.portfolio-details .item .image .img{
+	position: relative;
+}
 .portfolio-details .item .overlay {
 	background: rgba(0,0,0,.8);
 	display: block;
