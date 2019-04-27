@@ -1,7 +1,6 @@
 <?php
 include_once("config.php");
-
-// print_r($_COOKIE);
+session_start();
 
 $logged_in_user_array = mysqli_query($global_mysqli, "SELECT * FROM users where u_id =". $_COOKIE['logged_user_id'] ); // using mysqli_query  
 $global_logged_in_user = mysqli_fetch_array($logged_in_user_array);
