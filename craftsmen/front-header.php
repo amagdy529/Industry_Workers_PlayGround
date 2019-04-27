@@ -35,6 +35,7 @@ session_start();
     <!-- Style.css -->
     <link href="css/icons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     
     <link rel="icon" href="images/favicon.png" sizes="32x32" />
 </head>
@@ -74,35 +75,35 @@ session_start();
         </div>
 
         <div class="container clearfix">
-            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="constructor"
+            <div class="logo"><a href="index.php"><img src="images/logo.png" alt="constructor"
                         class="img-responsive"></a></div> <!-- end .logo -->
             <div class="navigation clearfix">
                 <nav class="main-nav">
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li>
-                            <a href="03-About-Us.html">About Us</a>
+                            <a href="03-About-Us.php">About Us</a>
                             <ul>
-                                <li><a href="11-404.html">404</a></li>
+                                <li><a href="11-404.php">404</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="04-Services.html">Services</a>
+                            <a href="04-Services.php">Services</a>
                             <ul>
-                                <li><a href="08-Service-Details.html">Service Details</a></li>
+                                <li><a href="08-Service-Details.php">Service Details</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="07-Gallery.html">Portfolio</a></li>
+                        <li class="active"><a href="07-Gallery.php">Portfolio</a></li>
                         <li class="active"><a href="workers-list.php">Workers</a></li>
                         <li>
-                            <a href="06-Blog-02.html">Blog</a>
+                            <a href="06-Blog-02.php">Blog</a>
                             <ul>
-                                <li><a href="06-Blog-02.html">Blog</a></li>
-                                <li><a href="05-Blog-01.html">Blog Grid</a></li>
-                                <li><a href="09-Single-Post.html">Single Post</a></li>
+                                <li><a href="06-Blog-02.php">Blog</a></li>
+                                <li><a href="05-Blog-01.php">Blog Grid</a></li>
+                                <li><a href="09-Single-Post.php">Single Post</a></li>
                             </ul>
                         </li>
-                        <li><a href="12-Contact-Us.html">Contact Us</a></li>
+                        <li><a href="12-Contact-Us.php">Contact Us</a></li>
                     </ul>
                 </nav> <!-- end .main-nav -->
                 <a href="" class="responsive-menu-open"><i class="fa fa-bars"></i></a>
