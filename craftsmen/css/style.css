@@ -1958,6 +1958,12 @@ legend {
 .portfolio-details .item .image {
 	position: relative;
 }
+.portfolio-details .item .img-dev .imgx {
+	position: relative;
+	/* max-width: 350px; */
+	width: 100%;
+	height: 300px;
+}
 .portfolio-details .item .image .img{
 	position: relative;
 }

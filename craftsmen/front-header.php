@@ -1,6 +1,12 @@
 <?php
 // session start in header in order towork with sessions in all pages
 session_start();
+
+$path = $_SERVER['REQUEST_URI'];
+$file = basename($path);         // $file is set to "index.php"
+$file = basename($path, ".php"); 
+// print_r($path);die;
+// die;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +16,7 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRAFTSMAN - Carpentry HTML Template</title>
+    <title><?=$file?></title>
 
     <!-- Fonts -->
     <link
@@ -36,6 +42,7 @@ session_start();
     <link href="css/icons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
     
     <link rel="icon" href="images/favicon.png" sizes="32x32" />
 </head>
@@ -80,22 +87,22 @@ session_start();
             <div class="navigation clearfix">
                 <nav class="main-nav">
                     <ul class="list-unstyled">
-                        <li><a href="index.php">Home</a></li>
-                        <li>
+                        <li class="<?php echo (strpos($path,'index')>0 ? 'active' : '');?>"><a href="index.php">Home</a></li>
+                        <li class="<?php echo (strpos($path,'About')>0 ? 'active' : '');?>">
                             <a href="03-About-Us.php">About Us</a>
                             <ul>
                                 <li><a href="11-404.php">404</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="<?php echo (strpos($path,'Services')>0 ? 'active' : '');?>">
                             <a href="04-Services.php">Services</a>
                             <ul>
                                 <li><a href="08-Service-Details.php">Service Details</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="07-Gallery.php">Portfolio</a></li>
-                        <li class="active"><a href="workers-list.php">Workers</a></li>
-                        <li>
+                        <li class="<?php echo (strpos($path,'Gallery')>0 ? 'active' : '');?>"><a href="07-Gallery.php">Portfolio</a></li>
+                        <li class="<?php echo (strpos($path,'workers')>0 ? 'active' : '');?>"><a href="workers-list.php">Workers</a></li>
+                        <li class="<?php echo (strpos($path,'Blog')>0 ? 'active' : '');?>">
                             <a href="06-Blog-02.php">Blog</a>
                             <ul>
                                 <li><a href="06-Blog-02.php">Blog</a></li>
@@ -103,7 +110,7 @@ session_start();
                                 <li><a href="09-Single-Post.php">Single Post</a></li>
                             </ul>
                         </li>
-                        <li><a href="12-Contact-Us.php">Contact Us</a></li>
+                        <li class="<?php echo (strpos($path,'Contact')>0 ? 'active' : '');?>"><a href="12-Contact-Us.php">Contact Us</a></li>
                     </ul>
                 </nav> <!-- end .main-nav -->
                 <a href="" class="responsive-menu-open"><i class="fa fa-bars"></i></a>
